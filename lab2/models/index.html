@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Models - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Models";
+        var mkdocs_page_input_path = "lab2/models.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Models</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#model-classes">Model Classes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#owner-model">Owner Model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#car-model">Car Model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#drivinglicense-model">DrivingLicense Model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ownership-model">Ownership Model</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#model-relationships">Model Relationships</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#field-types">Field Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#model-features">Model Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#database-schema">Database Schema</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../lab3/leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 2</li>
+      <li class="breadcrumb-item active">Models</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="django-models-configuration">Django Models Configuration<a class="headerlink" href="#django-models-configuration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 2 implements a car ownership management system using Django models. The system manages relationships between owners, cars, driving licenses, and ownership records.</p>
+<h2 id="model-classes">Model Classes<a class="headerlink" href="#model-classes" title="Permanent link">&para;</a></h2>
+<h3 id="owner-model">Owner Model<a class="headerlink" href="#owner-model" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from django.db import models
+
+class Owner(models.Model):
+    last_name = models.CharField(max_length=50)
+    first_name = models.CharField(max_length=50)
+    birth_date = models.DateField()
+
+    def __str__(self):
+        return f&quot;{self.last_name} {self.first_name}&quot;
+</code></pre>
+<h3 id="car-model">Car Model<a class="headerlink" href="#car-model" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">class Car(models.Model):
+    license_plate = models.CharField(max_length=10, unique=True)
+    make = models.CharField(max_length=50)
+    model = models.CharField(max_length=50)
+    color = models.CharField(max_length=20)
+
+    def __str__(self):
+        return f&quot;{self.make} {self.model} ({self.license_plate})&quot;
+</code></pre>
+<h3 id="drivinglicense-model">DrivingLicense Model<a class="headerlink" href="#drivinglicense-model" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">class DrivingLicense(models.Model):
+    owner = models.OneToOneField(Owner, on_delete=models.CASCADE)
+    license_number = models.CharField(max_length=20, unique=True)
+    document_number = models.CharField(max_length=20)
+    type = models.CharField(max_length=10)
+    issue_date = models.DateField()
+
+    def __str__(self):
+        return f&quot;License {self.license_number} ({self.owner})&quot;
+</code></pre>
+<h3 id="ownership-model">Ownership Model<a class="headerlink" href="#ownership-model" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">class Ownership(models.Model):
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
+    car = models.ForeignKey(Car, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return f&quot;{self.owner} owns {self.car}&quot;
+</code></pre>
+<h2 id="model-relationships">Model Relationships<a class="headerlink" href="#model-relationships" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Owner - DrivingLicense</li>
+<li>One-to-One relationship</li>
+<li>Each owner can have one driving license</li>
+<li>
+<p>Cascade deletion when owner is deleted</p>
+</li>
+<li>
+<p>Owner - Car (through Ownership)</p>
+</li>
+<li>Many-to-Many relationship</li>
+<li>Owners can own multiple cars</li>
+<li>Cars can have multiple owners (over time)</li>
+<li>Ownership model tracks the relationship period</li>
+</ol>
+<h2 id="field-types">Field Types<a class="headerlink" href="#field-types" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Character Fields</li>
+<li><code>CharField</code>: For text data with maximum length</li>
+<li>
+<p>Used for names, license plates, etc.</p>
+</li>
+<li>
+<p>Date Fields</p>
+</li>
+<li><code>DateField</code>: For storing dates</li>
+<li>
+<p>Used for birth dates, issue dates, etc.</p>
+</li>
+<li>
+<p>Relationship Fields</p>
+</li>
+<li><code>OneToOneField</code>: For one-to-one relationships</li>
+<li><code>ForeignKey</code>: For many-to-one relationships</li>
+</ol>
+<h2 id="model-features">Model Features<a class="headerlink" href="#model-features" title="Permanent link">&para;</a></h2>
+<ol>
+<li>String Representation</li>
+<li>Custom <code>__str__</code> methods</li>
+<li>
+<p>Human-readable object representation</p>
+</li>
+<li>
+<p>Field Constraints</p>
+</li>
+<li>Unique constraints</li>
+<li>Maximum length limits</li>
+<li>
+<p>Required/optional fields</p>
+</li>
+<li>
+<p>Cascade Deletion</p>
+</li>
+<li>Automatic deletion of related records</li>
+<li>
+<p>Data integrity maintenance</p>
+</li>
+<li>
+<p>Data Validation</p>
+</li>
+<li>Field type validation</li>
+<li>Unique constraint checking</li>
+<li>Required field validation</li>
+</ol>
+<h2 id="database-schema">Database Schema<a class="headerlink" href="#database-schema" title="Permanent link">&para;</a></h2>
+<pre><code class="language-sql">CREATE TABLE Owner (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    last_name VARCHAR(50) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    birth_date DATE NOT NULL
+);
+
+CREATE TABLE Car (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    license_plate VARCHAR(10) UNIQUE NOT NULL,
+    make VARCHAR(50) NOT NULL,
+    model VARCHAR(50) NOT NULL,
+    color VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE DrivingLicense (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    owner_id INTEGER UNIQUE NOT NULL,
+    license_number VARCHAR(20) UNIQUE NOT NULL,
+    document_number VARCHAR(20) NOT NULL,
+    type VARCHAR(10) NOT NULL,
+    issue_date DATE NOT NULL,
+    FOREIGN KEY (owner_id) REFERENCES Owner(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Ownership (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    owner_id INTEGER NOT NULL,
+    car_id INTEGER NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE,
+    FOREIGN KEY (owner_id) REFERENCES Owner(id) ON DELETE CASCADE,
+    FOREIGN KEY (car_id) REFERENCES Car(id) ON DELETE CASCADE
+);
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../overview/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../views/" class="btn btn-neutral float-right" title="Views">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../views/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>URLs - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "URLs";
+        var mkdocs_page_input_path = "lab3/urls.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">URLs</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#main-url-configuration">Main URL Configuration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#api-endpoints">API Endpoints</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#flight-endpoints">Flight Endpoints</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#passenger-endpoints">Passenger Endpoints</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#booking-endpoints">Booking Endpoints</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comment-endpoints">Comment Endpoints</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage-examples">Usage Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#http-request-examples">HTTP Request Examples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cors-configuration">CORS Configuration</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 3</li>
+      <li class="breadcrumb-item active">URLs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="url-configuration">URL Configuration<a class="headerlink" href="#url-configuration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 3 uses Django REST Framework's router system to automatically generate API URLs for the flight booking system.</p>
+<h2 id="main-url-configuration">Main URL Configuration<a class="headerlink" href="#main-url-configuration" title="Permanent link">&para;</a></h2>
+<pre><code class="language-python">from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from . import views
+
+router = DefaultRouter()
+router.register(r'flights', views.FlightViewSet)
+router.register(r'passengers', views.PassengerViewSet)
+router.register(r'bookings', views.BookingViewSet)
+router.register(r'comments', views.CommentViewSet)
+
+urlpatterns = [
+    path('api/', include(router.urls)),
+]
+</code></pre>
+<h2 id="api-endpoints">API Endpoints<a class="headerlink" href="#api-endpoints" title="Permanent link">&para;</a></h2>
+<h3 id="flight-endpoints">Flight Endpoints<a class="headerlink" href="#flight-endpoints" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GET /api/flights/</code>: List all flights</li>
+<li><code>POST /api/flights/</code>: Create new flight</li>
+<li><code>GET /api/flights/{id}/</code>: Retrieve flight details</li>
+<li><code>PUT /api/flights/{id}/</code>: Update flight information</li>
+<li><code>PATCH /api/flights/{id}/</code>: Partially update flight</li>
+<li><code>DELETE /api/flights/{id}/</code>: Delete flight</li>
+</ul>
+<h3 id="passenger-endpoints">Passenger Endpoints<a class="headerlink" href="#passenger-endpoints" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GET /api/passengers/</code>: List all passengers</li>
+<li><code>POST /api/passengers/</code>: Register new passenger</li>
+<li><code>GET /api/passengers/{id}/</code>: Retrieve passenger details</li>
+<li><code>PUT /api/passengers/{id}/</code>: Update passenger information</li>
+<li><code>PATCH /api/passengers/{id}/</code>: Partially update passenger</li>
+<li><code>DELETE /api/passengers/{id}/</code>: Delete passenger</li>
+</ul>
+<h3 id="booking-endpoints">Booking Endpoints<a class="headerlink" href="#booking-endpoints" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GET /api/bookings/</code>: List all bookings</li>
+<li><code>POST /api/bookings/</code>: Create new booking</li>
+<li><code>GET /api/bookings/{id}/</code>: Retrieve booking details</li>
+<li><code>PUT /api/bookings/{id}/</code>: Update booking</li>
+<li><code>PATCH /api/bookings/{id}/</code>: Partially update booking</li>
+<li><code>DELETE /api/bookings/{id}/</code>: Delete booking</li>
+</ul>
+<h3 id="comment-endpoints">Comment Endpoints<a class="headerlink" href="#comment-endpoints" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>GET /api/comments/</code>: List all comments</li>
+<li><code>POST /api/comments/</code>: Create new comment</li>
+<li><code>GET /api/comments/{id}/</code>: Retrieve comment details</li>
+<li><code>PUT /api/comments/{id}/</code>: Update comment</li>
+<li><code>PATCH /api/comments/{id}/</code>: Partially update comment</li>
+<li><code>DELETE /api/comments/{id}/</code>: Delete comment</li>
+</ul>
+<h2 id="usage-examples">Usage Examples<a class="headerlink" href="#usage-examples" title="Permanent link">&para;</a></h2>
+<h3 id="http-request-examples">HTTP Request Examples<a class="headerlink" href="#http-request-examples" title="Permanent link">&para;</a></h3>
+<ol>
+<li>List Flights</li>
+</ol>
+<pre><code class="language-http">GET /api/flights/
+Accept: application/json
+</code></pre>
+<ol>
+<li>Create Booking</li>
+</ol>
+<pre><code class="language-http">POST /api/bookings/
+Content-Type: application/json
+
+{
+    &quot;passenger&quot;: 1,
+    &quot;flight&quot;: 2,
+    &quot;seat_number&quot;: &quot;12A&quot;
+}
+</code></pre>
+<ol>
+<li>Update Flight Information</li>
+</ol>
+<pre><code class="language-http">PUT /api/flights/1/
+Content-Type: application/json
+
+{
+    &quot;flight_number&quot;: &quot;CA123&quot;,
+    &quot;departure&quot;: &quot;Beijing&quot;,
+    &quot;destination&quot;: &quot;Shanghai&quot;,
+    &quot;departure_time&quot;: &quot;2024-03-20T10:00:00Z&quot;,
+    &quot;arrival_time&quot;: &quot;2024-03-20T12:00:00Z&quot;,
+    &quot;price&quot;: &quot;599.99&quot;
+}
+</code></pre>
+<ol>
+<li>Delete Booking</li>
+</ol>
+<pre><code class="language-http">DELETE /api/bookings/1/
+</code></pre>
+<h2 id="cors-configuration">CORS Configuration<a class="headerlink" href="#cors-configuration" title="Permanent link">&para;</a></h2>
+<p>To support cross-origin requests, add the following settings in <code>settings.py</code>:</p>
+<p>```python
+INSTALLED_APPS = [
+    ...
+    'corsheaders',
+    ...
+]</p>
+<p>MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    ...
+]</p>
+<h1 id="allow-all-origins-in-development">Allow all origins in development<a class="headerlink" href="#allow-all-origins-in-development" title="Permanent link">&para;</a></h1>
+<p>CORS_ALLOW_ALL_ORIGINS = True </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../admin/" class="btn btn-neutral float-left" title="Admin"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../practical/" class="btn btn-neutral float-right" title="Practical">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../admin/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../practical/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

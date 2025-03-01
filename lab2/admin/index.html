@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Admin - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Admin";
+        var mkdocs_page_input_path = "lab2/admin.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Admin</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#admin-class-configuration">Admin Class Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#owner-admin">Owner Admin</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#car-admin">Car Admin</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#drivinglicense-admin">DrivingLicense Admin</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ownership-admin">Ownership Admin</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#feature-description">Feature Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#admin-interface-features">Admin Interface Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage-instructions">Usage Instructions</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../lab3/leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 2</li>
+      <li class="breadcrumb-item active">Admin</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="django-admin-interface-configuration">Django Admin Interface Configuration<a class="headerlink" href="#django-admin-interface-configuration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 2 configures the Django admin interface for the car ownership management system, allowing administrators to easily manage owners, cars, driving licenses, and ownership information.</p>
+<h2 id="admin-class-configuration">Admin Class Configuration<a class="headerlink" href="#admin-class-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="owner-admin">Owner Admin<a class="headerlink" href="#owner-admin" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from django.contrib import admin
+from .models import Owner, Car, DrivingLicense, Ownership
+
+@admin.register(Owner)
+class OwnerAdmin(admin.ModelAdmin):
+    list_display = ('last_name', 'first_name', 'birth_date')
+    search_fields = ('last_name', 'first_name')
+    ordering = ('last_name', 'first_name')
+</code></pre>
+<h3 id="car-admin">Car Admin<a class="headerlink" href="#car-admin" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">@admin.register(Car)
+class CarAdmin(admin.ModelAdmin):
+    list_display = ('license_plate', 'make', 'model', 'color')
+    list_filter = ('make', 'model')
+    search_fields = ('license_plate', 'make', 'model')
+</code></pre>
+<h3 id="drivinglicense-admin">DrivingLicense Admin<a class="headerlink" href="#drivinglicense-admin" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">@admin.register(DrivingLicense)
+class DrivingLicenseAdmin(admin.ModelAdmin):
+    list_display = ('owner', 'license_number', 'type', 'issue_date')
+    list_filter = ('type', 'issue_date')
+    search_fields = ('owner__last_name', 'license_number')
+    date_hierarchy = 'issue_date'
+</code></pre>
+<h3 id="ownership-admin">Ownership Admin<a class="headerlink" href="#ownership-admin" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">@admin.register(Ownership)
+class OwnershipAdmin(admin.ModelAdmin):
+    list_display = ('owner', 'car', 'start_date', 'end_date')
+    list_filter = ('start_date', 'end_date')
+    search_fields = ('owner__last_name', 'car__license_plate')
+    date_hierarchy = 'start_date'
+</code></pre>
+<h2 id="feature-description">Feature Description<a class="headerlink" href="#feature-description" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Owner Management</li>
+<li>Display name and birth date</li>
+<li>Support name search</li>
+<li>
+<p>Sort by last name and first name</p>
+</li>
+<li>
+<p>Car Management</p>
+</li>
+<li>Display license plate, make, model, and color</li>
+<li>Filter by make and model</li>
+<li>
+<p>Support license plate and car model search</p>
+</li>
+<li>
+<p>DrivingLicense Management</p>
+</li>
+<li>Display owner, license number, type, and issue date</li>
+<li>Filter by type and issue date</li>
+<li>Support owner name and license number search</li>
+<li>
+<p>Date hierarchy navigation</p>
+</li>
+<li>
+<p>Ownership Management</p>
+</li>
+<li>Display owner, car, and ownership dates</li>
+<li>Filter by dates</li>
+<li>Support owner and license plate search</li>
+<li>Date hierarchy navigation</li>
+</ol>
+<h2 id="admin-interface-features">Admin Interface Features<a class="headerlink" href="#admin-interface-features" title="Permanent link">&para;</a></h2>
+<ol>
+<li>List Display</li>
+<li>Custom display fields</li>
+<li>Sorting functionality</li>
+<li>
+<p>Pagination</p>
+</li>
+<li>
+<p>Filtering</p>
+</li>
+<li>Sidebar filters</li>
+<li>Date hierarchy navigation</li>
+<li>
+<p>Search box</p>
+</li>
+<li>
+<p>Editing</p>
+</li>
+<li>Add new records</li>
+<li>Modify existing records</li>
+<li>Delete records</li>
+<li>
+<p>Batch operations</p>
+</li>
+<li>
+<p>Permission Control</p>
+</li>
+<li>User group-based permissions</li>
+<li>Operation control</li>
+<li>Field-level permissions</li>
+</ol>
+<h2 id="usage-instructions">Usage Instructions<a class="headerlink" href="#usage-instructions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Access Admin Interface
+   <code>http://your-domain/admin/</code></p>
+</li>
+<li>
+<p>Login as Administrator</p>
+</li>
+<li>Use superuser account</li>
+<li>
+<p>Or use account with admin privileges</p>
+</li>
+<li>
+<p>Select Model to Manage</p>
+</li>
+<li>Owner Management</li>
+<li>Car Management</li>
+<li>DrivingLicense Management</li>
+<li>
+<p>Ownership Management</p>
+</li>
+<li>
+<p>Perform Operations</p>
+</li>
+<li>View lists</li>
+<li>Add records</li>
+<li>Modify records</li>
+<li>Delete records</li>
+<li>Batch operations </li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../forms/" class="btn btn-neutral float-left" title="Forms"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../urls/" class="btn btn-neutral float-right" title="URLs">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../forms/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../urls/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

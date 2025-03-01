@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Work 5 - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Work 5";
+        var mkdocs_page_input_path = "lab1/work5.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Work 5</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#technologies">Technologies</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-examples">Code Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#responsive-grid-layout">Responsive Grid Layout</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flexbox-navigation">Flexbox Navigation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#responsive-images">Responsive Images</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../lab3/leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 1</li>
+      <li class="breadcrumb-item active">Work 5</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="work-5-responsive-design">Work 5: Responsive Design<a class="headerlink" href="#work-5-responsive-design" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Creating responsive and mobile-friendly web layouts.</p>
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Responsive design principles</li>
+<li>Mobile-first approach</li>
+<li>Cross-browser compatibility</li>
+<li>Media queries</li>
+</ul>
+<h2 id="technologies">Technologies<a class="headerlink" href="#technologies" title="Permanent link">&para;</a></h2>
+<ul>
+<li>CSS Grid</li>
+<li>Flexbox</li>
+<li>Media Queries</li>
+<li>Mobile Optimization</li>
+</ul>
+<h2 id="code-examples">Code Examples<a class="headerlink" href="#code-examples" title="Permanent link">&para;</a></h2>
+<h3 id="responsive-grid-layout">Responsive Grid Layout<a class="headerlink" href="#responsive-grid-layout" title="Permanent link">&para;</a></h3>
+<pre><code class="language-css">/* Mobile First Grid Layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Tablet Layout */
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Layout */
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+</code></pre>
+<h3 id="flexbox-navigation">Flexbox Navigation<a class="headerlink" href="#flexbox-navigation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-css">/* Mobile Navigation */
+.nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.nav-list {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-list.active {
+    display: flex;
+}
+
+.nav-toggle {
+    display: block; /* Show hamburger menu on mobile */
+}
+
+/* Desktop Navigation */
+@media screen and (min-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .nav-toggle {
+        display: none; /* Hide hamburger menu on desktop */
+    }
+}
+</code></pre>
+<h3 id="responsive-images">Responsive Images<a class="headerlink" href="#responsive-images" title="Permanent link">&para;</a></h3>
+<p>```css
+/<em> Responsive Images </em>/
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}</p>
+<p>.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}</p>
+<p>/<em> Image Card </em>/
+.image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}</p>
+<p>.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}</p>
+<p>.image-card:hover img {
+    transform: scale(1.05);
+}</p>
+<p>/<em> Responsive Typography </em>/
+html {
+    font-size: 16px;
+}</p>
+<p>@media screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}</p>
+<p>@media screen and (min-width: 1200px) {
+    html {
+        font-size: 20px;
+    }
+} </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../work4/" class="btn btn-neutral float-left" title="Work 4"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../lab2/overview/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../work4/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../lab2/overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

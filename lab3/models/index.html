@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Models - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Models";
+        var mkdocs_page_input_path = "lab3/models.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Models</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#model-classes">Model Classes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#flight-model">Flight Model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#passenger-model">Passenger Model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#booking-model">Booking Model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comment-model">Comment Model</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#model-relationships">Model Relationships</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#field-types">Field Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#model-features">Model Features</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 3</li>
+      <li class="breadcrumb-item active">Models</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="models-configuration">Models Configuration<a class="headerlink" href="#models-configuration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 3 implements the data models for a flight booking system using Django models. The system includes flights, passengers, bookings, and comments.</p>
+<h2 id="model-classes">Model Classes<a class="headerlink" href="#model-classes" title="Permanent link">&para;</a></h2>
+<h3 id="flight-model">Flight Model<a class="headerlink" href="#flight-model" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from django.db import models
+
+class Flight(models.Model):
+    flight_number = models.CharField(max_length=50)
+    airline = models.CharField(max_length=100)
+    departure_time = models.DateTimeField()
+    arrival_time = models.DateTimeField()
+    FLIGHT_TYPES = (
+        ('ARR', 'Arrival'),
+        ('DEP', 'Departure')
+    )
+    flight_type = models.CharField(max_length=3, choices=FLIGHT_TYPES)
+    gate_number = models.CharField(max_length=10)
+
+    def __str__(self):
+        return f&quot;{self.flight_number}&quot;
+</code></pre>
+<h3 id="passenger-model">Passenger Model<a class="headerlink" href="#passenger-model" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">class Passenger(models.Model):
+    username = models.CharField(max_length=255, unique=True)
+    password = models.CharField(max_length=255)
+    bookings = models.ManyToManyField(Flight, through='Booking')
+
+    def __str__(self):
+        return self.username
+</code></pre>
+<h3 id="booking-model">Booking Model<a class="headerlink" href="#booking-model" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">class Booking(models.Model):
+    passenger = models.ForeignKey(Passenger, on_delete=models.CASCADE)
+    flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
+    seat_number = models.CharField(max_length=10)
+
+    def __str__(self):
+        return f&quot;{self.passenger.username} - {self.flight.flight_number}&quot;
+</code></pre>
+<h3 id="comment-model">Comment Model<a class="headerlink" href="#comment-model" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">class Comment(models.Model):
+    flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
+    comment_text = models.TextField()
+    rating = models.IntegerField(choices=[(i, i) for i in range(1, 11)])
+    commenter_name = models.CharField(max_length=100)
+    comment_date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f&quot;{self.flight.flight_number} - {self.commenter_name}&quot;
+</code></pre>
+<h2 id="model-relationships">Model Relationships<a class="headerlink" href="#model-relationships" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Flight - Passenger (Many-to-Many through Booking)</li>
+<li>Passengers can book multiple flights</li>
+<li>Flights can have multiple passengers</li>
+<li>
+<p>Booking model tracks seat assignments</p>
+</li>
+<li>
+<p>Flight - Comment (One-to-Many)</p>
+</li>
+<li>Each flight can have multiple comments</li>
+<li>Each comment belongs to one flight</li>
+</ol>
+<h2 id="field-types">Field Types<a class="headerlink" href="#field-types" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Text Fields</li>
+<li>CharField: For short text (flight numbers, names)</li>
+<li>
+<p>TextField: For longer text (comments)</p>
+</li>
+<li>
+<p>Date/Time Fields</p>
+</li>
+<li>DateTimeField: For flight times</li>
+<li>
+<p>DateField: For comment dates</p>
+</li>
+<li>
+<p>Relationship Fields</p>
+</li>
+<li>ForeignKey: For one-to-many relationships</li>
+<li>
+<p>ManyToManyField: For many-to-many relationships</p>
+</li>
+<li>
+<p>Choice Fields</p>
+</li>
+<li>Flight type choices (ARR/DEP)</li>
+<li>Rating choices (1-10)</li>
+</ol>
+<h2 id="model-features">Model Features<a class="headerlink" href="#model-features" title="Permanent link">&para;</a></h2>
+<ol>
+<li>String Representation</li>
+<li>Custom <strong>str</strong> methods</li>
+<li>
+<p>Human-readable output</p>
+</li>
+<li>
+<p>Field Constraints</p>
+</li>
+<li>Maximum length limits</li>
+<li>Unique constraints</li>
+<li>
+<p>Required fields</p>
+</li>
+<li>
+<p>Automatic Fields</p>
+</li>
+<li>Auto-add dates</li>
+<li>
+<p>Auto-incrementing IDs</p>
+</li>
+<li>
+<p>Data Validation</p>
+</li>
+<li>Field type validation</li>
+<li>Choice field validation</li>
+<li>Relationship integrity </li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../lab2/urls/" class="btn btn-neutral float-left" title="URLs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../views/" class="btn btn-neutral float-right" title="Views">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../lab2/urls/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../views/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

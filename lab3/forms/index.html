@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Forms - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Forms";
+        var mkdocs_page_input_path = "lab3/forms.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../views/">Views</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Forms</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#serializer-classes">Serializer Classes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#flight-serializer">Flight Serializer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#passenger-serializer">Passenger Serializer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#booking-serializer">Booking Serializer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comment-serializer">Comment Serializer</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#serializer-features">Serializer Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage-examples">Usage Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-objects">Creating Objects</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#updating-objects">Updating Objects</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#validation-examples">Validation Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#custom-field-validation">Custom Field Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#object-level-validation">Object-Level Validation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#response-formats">Response Formats</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#success-response">Success Response</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#error-response">Error Response</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 3</li>
+      <li class="breadcrumb-item active">Forms</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="serializers-configuration">Serializers Configuration<a class="headerlink" href="#serializers-configuration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 3 implements serializers using Django REST Framework for the flight booking system.</p>
+<h2 id="serializer-classes">Serializer Classes<a class="headerlink" href="#serializer-classes" title="Permanent link">&para;</a></h2>
+<h3 id="flight-serializer">Flight Serializer<a class="headerlink" href="#flight-serializer" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from rest_framework import serializers
+from .models import Flight
+
+class FlightSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Flight
+        fields = [
+            'id', 'flight_number', 'airline',
+            'departure_time', 'arrival_time',
+            'flight_type', 'gate_number'
+        ]
+</code></pre>
+<h3 id="passenger-serializer">Passenger Serializer<a class="headerlink" href="#passenger-serializer" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from .models import Passenger
+
+class PassengerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Passenger
+        fields = ['id', 'username', 'password', 'bookings']
+</code></pre>
+<h3 id="booking-serializer">Booking Serializer<a class="headerlink" href="#booking-serializer" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from .models import Booking
+
+class BookingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Booking
+        fields = ['id', 'passenger', 'flight', 'seat_number']
+</code></pre>
+<h3 id="comment-serializer">Comment Serializer<a class="headerlink" href="#comment-serializer" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from .models import Comment
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = [
+            'id', 'flight', 'comment_text',
+            'rating', 'commenter_name', 'comment_date'
+        ]
+</code></pre>
+<h2 id="serializer-features">Serializer Features<a class="headerlink" href="#serializer-features" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Field Serialization</li>
+<li>Model field mapping</li>
+<li>Relationship handling</li>
+<li>Custom field types</li>
+<li>
+<p>Field validation</p>
+</li>
+<li>
+<p>Data Validation</p>
+</li>
+<li>Model validation</li>
+<li>Field validation</li>
+<li>Custom validators</li>
+<li>
+<p>Error handling</p>
+</li>
+<li>
+<p>Nested Relationships</p>
+</li>
+<li>Foreign key serialization</li>
+<li>Many-to-many serialization</li>
+<li>Nested object creation</li>
+<li>
+<p>Related field handling</p>
+</li>
+<li>
+<p>Data Formatting</p>
+</li>
+<li>JSON serialization</li>
+<li>Date/time formatting</li>
+<li>Field type conversion</li>
+<li>Custom output formatting</li>
+</ol>
+<h2 id="usage-examples">Usage Examples<a class="headerlink" href="#usage-examples" title="Permanent link">&para;</a></h2>
+<h3 id="creating-objects">Creating Objects<a class="headerlink" href="#creating-objects" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># Creating a flight
+data = {
+    'flight_number': 'CA123',
+    'airline': 'Air China',
+    'departure_time': '2024-02-28T10:00:00Z',
+    'arrival_time': '2024-02-28T12:00:00Z',
+    'flight_type': 'DEP',
+    'gate_number': 'A1'
+}
+serializer = FlightSerializer(data=data)
+if serializer.is_valid():
+    flight = serializer.save()
+</code></pre>
+<h3 id="updating-objects">Updating Objects<a class="headerlink" href="#updating-objects" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># Updating a booking
+booking = Booking.objects.get(id=1)
+data = {'seat_number': 'B12'}
+serializer = BookingSerializer(booking, data=data, partial=True)
+if serializer.is_valid():
+    booking = serializer.save()
+</code></pre>
+<h2 id="validation-examples">Validation Examples<a class="headerlink" href="#validation-examples" title="Permanent link">&para;</a></h2>
+<h3 id="custom-field-validation">Custom Field Validation<a class="headerlink" href="#custom-field-validation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">class CommentSerializer(serializers.ModelSerializer):
+    def validate_rating(self, value):
+        if value &lt; 1 or value &gt; 10:
+            raise serializers.ValidationError(
+                &quot;Rating must be between 1 and 10&quot;
+            )
+        return value
+
+    class Meta:
+        model = Comment
+        fields = '__all__'
+</code></pre>
+<h3 id="object-level-validation">Object-Level Validation<a class="headerlink" href="#object-level-validation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">class BookingSerializer(serializers.ModelSerializer):
+    def validate(self, data):
+        # Check if seat is available
+        if Booking.objects.filter(
+            flight=data['flight'],
+            seat_number=data['seat_number']
+        ).exists():
+            raise serializers.ValidationError(
+                &quot;This seat is already booked&quot;
+            )
+        return data
+
+    class Meta:
+        model = Booking
+        fields = '__all__'
+</code></pre>
+<h2 id="response-formats">Response Formats<a class="headerlink" href="#response-formats" title="Permanent link">&para;</a></h2>
+<h3 id="success-response">Success Response<a class="headerlink" href="#success-response" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+    &quot;id&quot;: 1,
+    &quot;flight_number&quot;: &quot;CA123&quot;,
+    &quot;airline&quot;: &quot;Air China&quot;,
+    &quot;departure_time&quot;: &quot;2024-02-28T10:00:00Z&quot;,
+    &quot;arrival_time&quot;: &quot;2024-02-28T12:00:00Z&quot;,
+    &quot;flight_type&quot;: &quot;DEP&quot;,
+    &quot;gate_number&quot;: &quot;A1&quot;
+}
+</code></pre>
+<h3 id="error-response">Error Response<a class="headerlink" href="#error-response" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+    &quot;rating&quot;: [&quot;Ensure this value is less than or equal to 10.&quot;],
+    &quot;seat_number&quot;: [&quot;This seat is already booked&quot;]
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../views/" class="btn btn-neutral float-left" title="Views"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../admin/" class="btn btn-neutral float-right" title="Admin">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../views/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../admin/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

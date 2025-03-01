@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Components - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Components";
+        var mkdocs_page_input_path = "lab4/components.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../lab3/leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Components</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#component-structure">Component Structure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#app-component">App Component</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#navigation-component">Navigation Component</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flight-list-component">Flight List Component</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flight-card-component">Flight Card Component</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#booking-form-component">Booking Form Component</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#component-features">Component Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#component-styling">Component Styling</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#css-modules">CSS Modules</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 4</li>
+      <li class="breadcrumb-item active">Components</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="react-components">React Components<a class="headerlink" href="#react-components" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 4 implements various React components for the flight booking system frontend. These components provide a modern, interactive user interface for managing flights, bookings, and user interactions.</p>
+<h2 id="component-structure">Component Structure<a class="headerlink" href="#component-structure" title="Permanent link">&para;</a></h2>
+<h3 id="app-component">App Component<a class="headerlink" href="#app-component" title="Permanent link">&para;</a></h3>
+<pre><code class="language-jsx">// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import FlightList from './components/FlightList';
+import BookingForm from './components/BookingForm';
+import UserProfile from './components/UserProfile';
+
+function App() {
+  return (
+    &lt;Router&gt;
+      &lt;div className=&quot;app&quot;&gt;
+        &lt;Navigation /&gt;
+        &lt;Switch&gt;
+          &lt;Route exact path=&quot;/&quot; component={FlightList} /&gt;
+          &lt;Route path=&quot;/booking/:flightId&quot; component={BookingForm} /&gt;
+          &lt;Route path=&quot;/profile&quot; component={UserProfile} /&gt;
+        &lt;/Switch&gt;
+      &lt;/div&gt;
+    &lt;/Router&gt;
+  );
+}
+
+export default App;
+</code></pre>
+<h3 id="navigation-component">Navigation Component<a class="headerlink" href="#navigation-component" title="Permanent link">&para;</a></h3>
+<pre><code class="language-jsx">// Navigation.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function Navigation() {
+  return (
+    &lt;nav className=&quot;navigation&quot;&gt;
+      &lt;Link to=&quot;/&quot;&gt;Flights&lt;/Link&gt;
+      &lt;Link to=&quot;/profile&quot;&gt;My Profile&lt;/Link&gt;
+    &lt;/nav&gt;
+  );
+}
+
+export default Navigation;
+</code></pre>
+<h3 id="flight-list-component">Flight List Component<a class="headerlink" href="#flight-list-component" title="Permanent link">&para;</a></h3>
+<pre><code class="language-jsx">// FlightList.js
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import FlightCard from './FlightCard';
+
+function FlightList() {
+  const [flights, setFlights] = useState([]);
+  const history = useHistory();
+
+  useEffect(() =&gt; {
+    fetchFlights();
+  }, []);
+
+  const fetchFlights = async () =&gt; {
+    try {
+      const response = await fetch('http://localhost:8000/api/flights/');
+      const data = await response.json();
+      setFlights(data);
+    } catch (error) {
+      console.error('Error fetching flights:', error);
+    }
+  };
+
+  const handleBooking = (flightId) =&gt; {
+    history.push(`/booking/${flightId}`);
+  };
+
+  return (
+    &lt;div className=&quot;flight-list&quot;&gt;
+      {flights.map(flight =&gt; (
+        &lt;FlightCard
+          key={flight.id}
+          flight={flight}
+          onBook={() =&gt; handleBooking(flight.id)}
+        /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}
+
+export default FlightList;
+</code></pre>
+<h3 id="flight-card-component">Flight Card Component<a class="headerlink" href="#flight-card-component" title="Permanent link">&para;</a></h3>
+<pre><code class="language-jsx">// FlightCard.js
+import React from 'react';
+
+function FlightCard({ flight, onBook }) {
+  return (
+    &lt;div className=&quot;flight-card&quot;&gt;
+      &lt;h3&gt;{flight.airline}&lt;/h3&gt;
+      &lt;p&gt;Flight Number: {flight.flight_number}&lt;/p&gt;
+      &lt;p&gt;Departure: {new Date(flight.departure_time).toLocaleString()}&lt;/p&gt;
+      &lt;p&gt;Arrival: {new Date(flight.arrival_time).toLocaleString()}&lt;/p&gt;
+      &lt;p&gt;Gate: {flight.gate_number}&lt;/p&gt;
+      &lt;button onClick={onBook}&gt;Book Now&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default FlightCard;
+</code></pre>
+<h3 id="booking-form-component">Booking Form Component<a class="headerlink" href="#booking-form-component" title="Permanent link">&para;</a></h3>
+<pre><code class="language-jsx">// BookingForm.js
+import React, { useState } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
+
+function BookingForm() {
+  const { flightId } = useParams();
+  const history = useHistory();
+  const [seatNumber, setSeatNumber] = useState('');
+
+  const handleSubmit = async (e) =&gt; {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:8000/api/bookings/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          flight: flightId,
+          seat_number: seatNumber,
+        }),
+      });
+      if (response.ok) {
+        history.push('/profile');
+      }
+    } catch (error) {
+      console.error('Error creating booking:', error);
+    }
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit} className=&quot;booking-form&quot;&gt;
+      &lt;h2&gt;Book Flight&lt;/h2&gt;
+      &lt;div&gt;
+        &lt;label&gt;Seat Number:&lt;/label&gt;
+        &lt;input
+          type=&quot;text&quot;
+          value={seatNumber}
+          onChange={(e) =&gt; setSeatNumber(e.target.value)}
+          required
+        /&gt;
+      &lt;/div&gt;
+      &lt;button type=&quot;submit&quot;&gt;Confirm Booking&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}
+
+export default BookingForm;
+</code></pre>
+<h2 id="component-features">Component Features<a class="headerlink" href="#component-features" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Routing</li>
+<li>React Router integration</li>
+<li>Dynamic route parameters</li>
+<li>
+<p>Navigation handling</p>
+</li>
+<li>
+<p>State Management</p>
+</li>
+<li>useState hooks</li>
+<li>useEffect for data fetching</li>
+<li>
+<p>Component state handling</p>
+</li>
+<li>
+<p>API Integration</p>
+</li>
+<li>Fetch API usage</li>
+<li>Async/await operations</li>
+<li>
+<p>Error handling</p>
+</li>
+<li>
+<p>Event Handling</p>
+</li>
+<li>Form submissions</li>
+<li>Button clicks</li>
+<li>User interactions</li>
+</ol>
+<h2 id="component-styling">Component Styling<a class="headerlink" href="#component-styling" title="Permanent link">&para;</a></h2>
+<h3 id="css-modules">CSS Modules<a class="headerlink" href="#css-modules" title="Permanent link">&para;</a></h3>
+<pre><code class="language-css">/* FlightCard.module.css */
+.flight-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.flight-card h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.flight-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</code></pre>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Component Organization</li>
+<li>Modular structure</li>
+<li>Single responsibility</li>
+<li>
+<p>Reusable components</p>
+</li>
+<li>
+<p>State Management</p>
+</li>
+<li>Proper state location</li>
+<li>State updates</li>
+<li>
+<p>Props passing</p>
+</li>
+<li>
+<p>Performance</p>
+</li>
+<li>Memoization</li>
+<li>Lazy loading</li>
+<li>
+<p>Effect cleanup</p>
+</li>
+<li>
+<p>Error Handling</p>
+</li>
+<li>Error boundaries</li>
+<li>Loading states</li>
+<li>User feedback </li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../pages/" class="btn btn-neutral float-left" title="Pages"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../pages/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

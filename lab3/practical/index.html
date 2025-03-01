@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Practical - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Practical";
+        var mkdocs_page_input_path = "lab3/practical.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Practical</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#task-1-api-development">Task 1: API Development</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation">Implementation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#task-2-data-modeling">Task 2: Data Modeling</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#requirements_1">Requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation_1">Implementation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#task-3-frontend-integration">Task 3: Frontend Integration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#requirements_2">Requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation_2">Implementation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#task-4-testing">Task 4: Testing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#api-testing">API Testing</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#task-5-documentation">Task 5: Documentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#api-documentation">API Documentation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deployment-steps">Deployment Steps</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#security-considerations">Security Considerations</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 3</li>
+      <li class="breadcrumb-item active">Practical</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="practical-tasks-air-system">Practical Tasks - Air System<a class="headerlink" href="#practical-tasks-air-system" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 3 implements a complete flight booking system using Django REST Framework. The system includes flight management, passenger bookings, and a comment system.</p>
+<h2 id="task-1-api-development">Task 1: API Development<a class="headerlink" href="#task-1-api-development" title="Permanent link">&para;</a></h2>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create RESTful API endpoints</li>
+<li>Implement CRUD operations</li>
+<li>Handle user authentication</li>
+<li>Process JSON data</li>
+</ol>
+<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># views.py
+from rest_framework import viewsets
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+
+class FlightViewSet(viewsets.ModelViewSet):
+    queryset = Flight.objects.all()
+    serializer_class = FlightSerializer
+
+class LoginView(APIView):
+    def post(self, request):
+        username = request.data.get('username')
+        password = request.data.get('password')
+        try:
+            passenger = Passenger.objects.get(username=username, password=password)
+            serializer = PassengerSerializer(passenger)
+            return Response(serializer.data)
+        except Passenger.DoesNotExist:
+            return Response({'error': 'Invalid credentials'}, status=401)
+</code></pre>
+<h2 id="task-2-data-modeling">Task 2: Data Modeling<a class="headerlink" href="#task-2-data-modeling" title="Permanent link">&para;</a></h2>
+<h3 id="requirements_1">Requirements<a class="headerlink" href="#requirements_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Design database schema</li>
+<li>Define model relationships</li>
+<li>Implement validation rules</li>
+<li>Handle data integrity</li>
+</ol>
+<h3 id="implementation_1">Implementation<a class="headerlink" href="#implementation_1" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># models.py
+from django.db import models
+
+class Flight(models.Model):
+    flight_number = models.CharField(max_length=50)
+    airline = models.CharField(max_length=100)
+    departure_time = models.DateTimeField()
+    arrival_time = models.DateTimeField()
+    flight_type = models.CharField(max_length=3, choices=[('ARR', 'Arrival'), ('DEP', 'Departure')])
+    gate_number = models.CharField(max_length=10)
+
+class Booking(models.Model):
+    passenger = models.ForeignKey(Passenger, on_delete=models.CASCADE)
+    flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
+    seat_number = models.CharField(max_length=10)
+</code></pre>
+<h2 id="task-3-frontend-integration">Task 3: Frontend Integration<a class="headerlink" href="#task-3-frontend-integration" title="Permanent link">&para;</a></h2>
+<h3 id="requirements_2">Requirements<a class="headerlink" href="#requirements_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create API endpoints</li>
+<li>Handle CORS</li>
+<li>Process API responses</li>
+<li>Implement error handling</li>
+</ol>
+<h3 id="implementation_2">Implementation<a class="headerlink" href="#implementation_2" title="Permanent link">&para;</a></h3>
+<pre><code class="language-javascript">// frontend.js
+async function loginUser(username, password) {
+    try {
+        const response = await fetch('http://localhost:8000/api/login/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+        });
+        const data = await response.json();
+        if (response.ok) {
+            return data;
+        } else {
+            throw new Error(data.error);
+        }
+    } catch (error) {
+        console.error('Login failed:', error);
+        throw error;
+    }
+}
+
+async function getFlights() {
+    try {
+        const response = await fetch('http://localhost:8000/api/flights/');
+        const flights = await response.json();
+        return flights;
+    } catch (error) {
+        console.error('Failed to fetch flights:', error);
+        throw error;
+    }
+}
+</code></pre>
+<h2 id="task-4-testing">Task 4: Testing<a class="headerlink" href="#task-4-testing" title="Permanent link">&para;</a></h2>
+<h3 id="api-testing">API Testing<a class="headerlink" href="#api-testing" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python"># tests.py
+from rest_framework.test import APITestCase
+from django.urls import reverse
+from .models import Flight, Passenger
+
+class FlightAPITests(APITestCase):
+    def setUp(self):
+        self.flight = Flight.objects.create(
+            flight_number='CA123',
+            airline='Air China',
+            departure_time='2024-02-28T10:00:00Z',
+            arrival_time='2024-02-28T12:00:00Z',
+            flight_type='DEP',
+            gate_number='A1'
+        )
+
+    def test_list_flights(self):
+        url = reverse('flight-list')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.data), 1)
+
+    def test_create_booking(self):
+        url = reverse('booking-list')
+        data = {
+            'flight': self.flight.id,
+            'seat_number': 'A1'
+        }
+        response = self.client.post(url, data)
+        self.assertEqual(response.status_code, 201)
+</code></pre>
+<h2 id="task-5-documentation">Task 5: Documentation<a class="headerlink" href="#task-5-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="api-documentation">API Documentation<a class="headerlink" href="#api-documentation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Flight Endpoints</li>
+</ol>
+<pre><code class="language-http"># List all flights
+GET /api/flights/
+
+# Create a new flight
+POST /api/flights/
+Content-Type: application/json
+
+{
+    &quot;flight_number&quot;: &quot;CA123&quot;,
+    &quot;airline&quot;: &quot;Air China&quot;,
+    &quot;departure_time&quot;: &quot;2024-02-28T10:00:00Z&quot;,
+    &quot;arrival_time&quot;: &quot;2024-02-28T12:00:00Z&quot;,
+    &quot;flight_type&quot;: &quot;DEP&quot;,
+    &quot;gate_number&quot;: &quot;A1&quot;
+}
+</code></pre>
+<ol>
+<li>Booking Endpoints</li>
+</ol>
+<pre><code class="language-http"># Create a new booking
+POST /api/bookings/
+Content-Type: application/json
+
+{
+    &quot;flight&quot;: 1,
+    &quot;seat_number&quot;: &quot;A1&quot;
+}
+</code></pre>
+<h2 id="deployment-steps">Deployment Steps<a class="headerlink" href="#deployment-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Database Setup</li>
+</ol>
+<pre><code class="language-bash">python manage.py makemigrations
+python manage.py migrate
+</code></pre>
+<ol>
+<li>Create Superuser</li>
+</ol>
+<pre><code class="language-bash">python manage.py createsuperuser
+</code></pre>
+<ol>
+<li>Run Development Server</li>
+</ol>
+<pre><code class="language-bash">python manage.py runserver
+</code></pre>
+<h2 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Authentication</li>
+<li>Implement user authentication</li>
+<li>Secure password storage</li>
+<li>
+<p>Session management</p>
+</li>
+<li>
+<p>Data Validation</p>
+</li>
+<li>Input sanitization</li>
+<li>Data type validation</li>
+<li>
+<p>Business rule validation</p>
+</li>
+<li>
+<p>Error Handling</p>
+</li>
+<li>Proper error messages</li>
+<li>Status code usage</li>
+<li>
+<p>Exception handling</p>
+</li>
+<li>
+<p>API Security</p>
+</li>
+<li>Rate limiting</li>
+<li>CORS configuration</li>
+<li>Token authentication </li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../urls/" class="btn btn-neutral float-left" title="URLs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../lab4/pages/" class="btn btn-neutral float-right" title="Pages">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../urls/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../lab4/pages/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

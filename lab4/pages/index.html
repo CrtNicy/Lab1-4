@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Pages - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Pages";
+        var mkdocs_page_input_path = "lab4/pages.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../lab3/leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Pages</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#page-structure">Page Structure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#main-pages">Main Pages</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#route-configuration">Route Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#router-setup">Router Setup</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#page-components">Page Components</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#home-page">Home Page</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flight-list-page">Flight List Page</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#booking-page">Booking Page</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#page-implementation-details">Page Implementation Details</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#login-page-loginview">Login Page (LoginView)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flight-list-page-flightview">Flight List Page (FlightView)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#booking-management-page-bookingview">Booking Management Page (BookingView)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#data-display">Data Display</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#operations">Operations</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#user-experience">User Experience</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-examples">Code Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#form-validation">Form Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-loading">Data Loading</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#styling">Styling</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#api-endpoints">API Endpoints</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#get-booking-list">Get Booking List</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-booking">Create Booking</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update-booking">Update Booking</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#delete-booking">Delete Booking</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 4</li>
+      <li class="breadcrumb-item active">Pages</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="pages-and-routing">Pages and Routing<a class="headerlink" href="#pages-and-routing" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 4 implements page routing and layout for the flight booking system frontend using React Router and modern web design principles.</p>
+<h2 id="page-structure">Page Structure<a class="headerlink" href="#page-structure" title="Permanent link">&para;</a></h2>
+<h3 id="main-pages">Main Pages<a class="headerlink" href="#main-pages" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Home Page</li>
+<li>Flight List Page</li>
+<li>Booking Page</li>
+<li>User Profile Page</li>
+<li>Login/Register Page</li>
+</ol>
+<h2 id="route-configuration">Route Configuration<a class="headerlink" href="#route-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="router-setup">Router Setup<a class="headerlink" href="#router-setup" title="Permanent link">&para;</a></h3>
+<pre><code class="language-jsx">// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import HomePage from './pages/HomePage';
+import FlightListPage from './pages/FlightListPage';
+import BookingPage from './pages/BookingPage';
+import ProfilePage from './pages/ProfilePage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+
+function App() {
+  return (
+    &lt;Router&gt;
+      &lt;Switch&gt;
+        &lt;Route exact path=&quot;/&quot; component={HomePage} /&gt;
+        &lt;Route path=&quot;/flights&quot; component={FlightListPage} /&gt;
+        &lt;Route path=&quot;/booking/:flightId&quot; component={BookingPage} /&gt;
+        &lt;Route path=&quot;/profile&quot; component={ProfilePage} /&gt;
+        &lt;Route path=&quot;/login&quot; component={LoginPage} /&gt;
+        &lt;Route path=&quot;/register&quot; component={RegisterPage} /&gt;
+      &lt;/Switch&gt;
+    &lt;/Router&gt;
+  );
+}
+
+export default App;
+</code></pre>
+<h2 id="page-components">Page Components<a class="headerlink" href="#page-components" title="Permanent link">&para;</a></h2>
+<h3 id="home-page">Home Page<a class="headerlink" href="#home-page" title="Permanent link">&para;</a></h3>
+<pre><code class="language-jsx">// HomePage.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function HomePage() {
+  return (
+    &lt;div className=&quot;home-page&quot;&gt;
+      &lt;header&gt;
+        &lt;h1&gt;Welcome to Flight Booking System&lt;/h1&gt;
+      &lt;/header&gt;
+      &lt;main&gt;
+        &lt;section className=&quot;search-section&quot;&gt;
+          &lt;h2&gt;Find Your Flight&lt;/h2&gt;
+          &lt;Link to=&quot;/flights&quot; className=&quot;cta-button&quot;&gt;
+            Search Flights
+          &lt;/Link&gt;
+        &lt;/section&gt;
+      &lt;/main&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default HomePage;
+</code></pre>
+<h3 id="flight-list-page">Flight List Page<a class="headerlink" href="#flight-list-page" title="Permanent link">&para;</a></h3>
+<pre><code class="language-jsx">// FlightListPage.js
+import React from 'react';
+import FlightList from '../components/FlightList';
+import SearchFilter from '../components/SearchFilter';
+
+function FlightListPage() {
+  return (
+    &lt;div className=&quot;flight-list-page&quot;&gt;
+      &lt;h1&gt;Available Flights&lt;/h1&gt;
+      &lt;SearchFilter /&gt;
+      &lt;FlightList /&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default FlightListPage;
+</code></pre>
+<h3 id="booking-page">Booking Page<a class="headerlink" href="#booking-page" title="Permanent link">&para;</a></h3>
+<pre><code class="language-jsx">// BookingPage.js
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
+import FlightDetails from '../components/FlightDetails';
+
+function BookingPage() {
+  const { flightId } = useParams();
+
+  return (
+    &lt;div className=&quot;booking-page&quot;&gt;
+      &lt;h1&gt;Flight Booking&lt;/h1&gt;
+      &lt;FlightDetails flightId={flightId} /&gt;
+      &lt;BookingForm flightId={flightId} /&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default BookingPage;
+</code></pre>
+<h2 id="page-implementation-details">Page Implementation Details<a class="headerlink" href="#page-implementation-details" title="Permanent link">&para;</a></h2>
+<h3 id="login-page-loginview">Login Page (LoginView)<a class="headerlink" href="#login-page-loginview" title="Permanent link">&para;</a></h3>
+<p>The login page implements user authentication with the following features:</p>
+<ul>
+<li>Clean login form design</li>
+<li>Username and password validation</li>
+<li>Error message display</li>
+<li>Session persistence</li>
+</ul>
+<h3 id="flight-list-page-flightview">Flight List Page (FlightView)<a class="headerlink" href="#flight-list-page-flightview" title="Permanent link">&para;</a></h3>
+<p>The flight list page displays all available flights with:</p>
+<ul>
+<li>Table format flight data display</li>
+<li>Filtering by flight number and airline</li>
+<li>Flight status display (Arrival/Departure)</li>
+<li>Pagination functionality</li>
+</ul>
+<h3 id="booking-management-page-bookingview">Booking Management Page (BookingView)<a class="headerlink" href="#booking-management-page-bookingview" title="Permanent link">&para;</a></h3>
+<p>The booking management page is the core functionality page with:</p>
+<h4 id="data-display">Data Display<a class="headerlink" href="#data-display" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Statistics Cards</li>
+<li>Total bookings</li>
+<li>Current user</li>
+<li>
+<p>Recent bookings</p>
+</li>
+<li>
+<p>Booking List</p>
+</li>
+<li>Flight number (with tags)</li>
+<li>Flight type (Arrival/Departure with color coding)</li>
+<li>Departure time (formatted display)</li>
+<li>Passenger information (with avatar)</li>
+</ul>
+<h4 id="operations">Operations<a class="headerlink" href="#operations" title="Permanent link">&para;</a></h4>
+<ul>
+<li>New Booking</li>
+<li>Flight number input (with validation)</li>
+<li>Seat number selection (with format validation)</li>
+<li>
+<p>Submission confirmation</p>
+</li>
+<li>
+<p>Edit Booking</p>
+</li>
+<li>Seat number modification</li>
+<li>Flight information retention</li>
+<li>
+<p>Real-time validation</p>
+</li>
+<li>
+<p>Cancellation</p>
+</li>
+<li>Confirmation dialog</li>
+<li>Security prompt</li>
+<li>Status feedback</li>
+</ul>
+<h4 id="user-experience">User Experience<a class="headerlink" href="#user-experience" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Responsive layout</li>
+<li>Operation feedback</li>
+<li>Error handling</li>
+<li>Loading states</li>
+<li>Refresh functionality</li>
+</ul>
+<h2 id="code-examples">Code Examples<a class="headerlink" href="#code-examples" title="Permanent link">&para;</a></h2>
+<h3 id="form-validation">Form Validation<a class="headerlink" href="#form-validation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-javascript">const rules = {
+  flight: [
+    { required: true, message: 'Please enter flight number', trigger: 'blur' },
+    { min: 3, max: 10, message: 'Flight number must be 3-10 characters', trigger: 'blur' }
+  ],
+  seat_number: [
+    { required: true, message: 'Please enter seat number', trigger: 'blur' },
+    { pattern: /^[A-Z]?[0-9]+$/, message: 'Invalid seat number format', trigger: 'blur' }
+  ]
+};
+</code></pre>
+<h3 id="data-loading">Data Loading<a class="headerlink" href="#data-loading" title="Permanent link">&para;</a></h3>
+<pre><code class="language-javascript">const loadBookings = () =&gt; {
+  axios.get('http://127.0.0.1:8000/app/api/bookings/')
+    .then(response =&gt; {
+      const userBookings = response.data.filter(
+        (booking: any) =&gt; booking.passenger.username === store.state.username
+      );
+      // Process data...
+    })
+    .catch(error =&gt; {
+      console.error(error);
+    });
+};
+</code></pre>
+<h2 id="styling">Styling<a class="headerlink" href="#styling" title="Permanent link">&para;</a></h2>
+<p>Using Element Plus component library with custom styles:</p>
+<pre><code class="language-css">.booking {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.statistics {
+  margin-bottom: 20px;
+}
+
+.card-content {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #409EFF;
+}
+</code></pre>
+<h2 id="api-endpoints">API Endpoints<a class="headerlink" href="#api-endpoints" title="Permanent link">&para;</a></h2>
+<h3 id="get-booking-list">Get Booking List<a class="headerlink" href="#get-booking-list" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Endpoint: <code>/app/api/bookings/</code></li>
+<li>Method: GET</li>
+<li>Response: List of bookings</li>
+</ul>
+<h3 id="create-booking">Create Booking<a class="headerlink" href="#create-booking" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Endpoint: <code>/app/api/bookings/</code></li>
+<li>Method: POST</li>
+<li>Data:
+  <code>json
+  {
+    "passenger_id": 2,
+    "seat_number": "A123",
+    "flight": 5
+  }</code></li>
+</ul>
+<h3 id="update-booking">Update Booking<a class="headerlink" href="#update-booking" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Endpoint: <code>/app/api/bookings/{id}/</code></li>
+<li>Method: PATCH</li>
+<li>Data:
+  <code>json
+  {
+    "seat_number": "B456"
+  }</code></li>
+</ul>
+<h3 id="delete-booking">Delete Booking<a class="headerlink" href="#delete-booking" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Endpoint: <code>/app/api/bookings/{id}/</code></li>
+<li>Method: DELETE </li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../lab3/practical/" class="btn btn-neutral float-left" title="Practical"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../components/" class="btn btn-neutral float-right" title="Components">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../lab3/practical/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../components/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Forms - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Forms";
+        var mkdocs_page_input_path = "lab2/forms.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../views/">Views</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Forms</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#form-classes">Form Classes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#owner-form">Owner Form</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#car-form">Car Form</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#drivinglicense-form">DrivingLicense Form</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ownership-form">Ownership Form</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#form-features">Form Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage-examples">Usage Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#view-implementation">View Implementation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#template-usage">Template Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#form-validation-rules">Form Validation Rules</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../lab3/leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 2</li>
+      <li class="breadcrumb-item active">Forms</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="django-forms-configuration">Django Forms Configuration<a class="headerlink" href="#django-forms-configuration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 2 implements form handling for the car ownership management system, providing user-friendly interfaces for data input and validation.</p>
+<h2 id="form-classes">Form Classes<a class="headerlink" href="#form-classes" title="Permanent link">&para;</a></h2>
+<h3 id="owner-form">Owner Form<a class="headerlink" href="#owner-form" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from django import forms
+from .models import Owner
+
+class OwnerForm(forms.ModelForm):
+    class Meta:
+        model = Owner
+        fields = ['last_name', 'first_name', 'birth_date']
+        widgets = {
+            'birth_date': forms.DateInput(attrs={'type': 'date'})
+        }
+</code></pre>
+<h3 id="car-form">Car Form<a class="headerlink" href="#car-form" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from .models import Car
+
+class CarForm(forms.ModelForm):
+    class Meta:
+        model = Car
+        fields = ['license_plate', 'make', 'model', 'color']
+</code></pre>
+<h3 id="drivinglicense-form">DrivingLicense Form<a class="headerlink" href="#drivinglicense-form" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from .models import DrivingLicense
+
+class DrivingLicenseForm(forms.ModelForm):
+    class Meta:
+        model = DrivingLicense
+        fields = ['owner', 'license_number', 'document_number', 'type', 'issue_date']
+        widgets = {
+            'issue_date': forms.DateInput(attrs={'type': 'date'})
+        }
+</code></pre>
+<h3 id="ownership-form">Ownership Form<a class="headerlink" href="#ownership-form" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from .models import Ownership
+
+class OwnershipForm(forms.ModelForm):
+    class Meta:
+        model = Ownership
+        fields = ['owner', 'car', 'start_date', 'end_date']
+        widgets = {
+            'start_date': forms.DateInput(attrs={'type': 'date'}),
+            'end_date': forms.DateInput(attrs={'type': 'date'})
+        }
+</code></pre>
+<h2 id="form-features">Form Features<a class="headerlink" href="#form-features" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Data Validation</li>
+<li>Field type validation</li>
+<li>Required field checking</li>
+<li>
+<p>Custom validation rules</p>
+</li>
+<li>
+<p>Widget Customization</p>
+</li>
+<li>Date input widgets</li>
+<li>Select widgets for relationships</li>
+<li>
+<p>Custom field rendering</p>
+</li>
+<li>
+<p>Error Handling</p>
+</li>
+<li>Field-specific error messages</li>
+<li>Form-wide error messages</li>
+<li>
+<p>Validation error display</p>
+</li>
+<li>
+<p>Form Processing</p>
+</li>
+<li>GET/POST handling</li>
+<li>Data cleaning and normalization</li>
+<li>Model instance creation/update</li>
+</ol>
+<h2 id="usage-examples">Usage Examples<a class="headerlink" href="#usage-examples" title="Permanent link">&para;</a></h2>
+<h3 id="view-implementation">View Implementation<a class="headerlink" href="#view-implementation" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">def owner_create(request):
+    if request.method == 'POST':
+        form = OwnerForm(request.POST)
+        if form.is_valid():
+            owner = form.save()
+            return redirect('owner_detail', owner_id=owner.id)
+    else:
+        form = OwnerForm()
+    return render(request, 'owner_form.html', {'form': form})
+</code></pre>
+<h3 id="template-usage">Template Usage<a class="headerlink" href="#template-usage" title="Permanent link">&para;</a></h3>
+<pre><code class="language-html">&lt;form method=&quot;post&quot;&gt;
+    {% csrf_token %}
+    {{ form.as_p }}
+    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<h2 id="form-validation-rules">Form Validation Rules<a class="headerlink" href="#form-validation-rules" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Owner Form</li>
+<li>Last name and first name required</li>
+<li>
+<p>Birth date must be in the past</p>
+</li>
+<li>
+<p>Car Form</p>
+</li>
+<li>License plate must be unique</li>
+<li>
+<p>Make and model required</p>
+</li>
+<li>
+<p>DrivingLicense Form</p>
+</li>
+<li>License number must be unique</li>
+<li>Issue date required</li>
+<li>
+<p>Valid license type selection</p>
+</li>
+<li>
+<p>Ownership Form</p>
+</li>
+<li>Valid owner and car selection</li>
+<li>Start date required</li>
+<li>End date must be after start date if provided </li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../views/" class="btn btn-neutral float-left" title="Views"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../admin/" class="btn btn-neutral float-right" title="Admin">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../views/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../admin/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

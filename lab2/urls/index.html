@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>URLs - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "URLs";
+        var mkdocs_page_input_path = "lab2/urls.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">URLs</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#url-configuration">URL Configuration</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#main-url-configuration">Main URL Configuration</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#url-patterns">URL Patterns</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#owner-management">Owner Management</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#car-management">Car Management</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#drivinglicense-management">DrivingLicense Management</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ownership-management">Ownership Management</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#url-features">URL Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage-examples">Usage Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#template-url-tags">Template URL Tags</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#view-url-resolution">View URL Resolution</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab3/practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../lab3/leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 2</li>
+      <li class="breadcrumb-item active">URLs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="url-configuration-car-ownership-system">URL Configuration - Car Ownership System<a class="headerlink" href="#url-configuration-car-ownership-system" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 2 implements URL routing for the car ownership management system, defining patterns for various views and operations.</p>
+<h2 id="url-configuration">URL Configuration<a class="headerlink" href="#url-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="main-url-configuration">Main URL Configuration<a class="headerlink" href="#main-url-configuration" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from django.urls import path
+from . import views
+
+urlpatterns = [
+    # Owner URLs
+    path('', views.owner_list, name='owner_list'),
+    path('&lt;int:owner_id&gt;/', views.owner_detail, name='owner_detail'),
+    path('create/', views.owner_create, name='owner_create'),
+    path('&lt;int:owner_id&gt;/update/', views.owner_update, name='owner_update'),
+    path('&lt;int:owner_id&gt;/delete/', views.owner_delete, name='owner_delete'),
+
+    # Car URLs
+    path('cars/', views.car_list, name='car_list'),
+    path('cars/&lt;int:car_id&gt;/', views.car_detail, name='car_detail'),
+    path('cars/create/', views.car_create, name='car_create'),
+    path('cars/&lt;int:car_id&gt;/update/', views.car_update, name='car_update'),
+    path('cars/&lt;int:car_id&gt;/delete/', views.car_delete, name='car_delete'),
+
+    # DrivingLicense URLs
+    path('licenses/', views.license_list, name='license_list'),
+    path('licenses/&lt;int:license_id&gt;/', views.license_detail, name='license_detail'),
+    path('licenses/create/', views.license_create, name='license_create'),
+    path('licenses/&lt;int:license_id&gt;/update/', views.license_update, name='license_update'),
+    path('licenses/&lt;int:license_id&gt;/delete/', views.license_delete, name='license_delete'),
+
+    # Ownership URLs
+    path('ownerships/', views.ownership_list, name='ownership_list'),
+    path('ownerships/create/', views.ownership_create, name='ownership_create'),
+    path('ownerships/&lt;int:ownership_id&gt;/update/', views.ownership_update, name='ownership_update'),
+    path('ownerships/&lt;int:ownership_id&gt;/delete/', views.ownership_delete, name='ownership_delete'),
+]
+</code></pre>
+<h2 id="url-patterns">URL Patterns<a class="headerlink" href="#url-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="owner-management">Owner Management<a class="headerlink" href="#owner-management" title="Permanent link">&para;</a></h3>
+<ol>
+<li>List View</li>
+<li>URL: <code>/</code></li>
+<li>Name: <code>owner_list</code></li>
+<li>View: <code>owner_list</code></li>
+<li>
+<p>Method: GET</p>
+</li>
+<li>
+<p>Detail View</p>
+</li>
+<li>URL: <code>/&lt;owner_id&gt;/</code></li>
+<li>Name: <code>owner_detail</code></li>
+<li>View: <code>owner_detail</code></li>
+<li>
+<p>Method: GET</p>
+</li>
+<li>
+<p>Create View</p>
+</li>
+<li>URL: <code>/create/</code></li>
+<li>Name: <code>owner_create</code></li>
+<li>View: <code>owner_create</code></li>
+<li>
+<p>Methods: GET, POST</p>
+</li>
+<li>
+<p>Update View</p>
+</li>
+<li>URL: <code>/&lt;owner_id&gt;/update/</code></li>
+<li>Name: <code>owner_update</code></li>
+<li>View: <code>owner_update</code></li>
+<li>
+<p>Methods: GET, POST</p>
+</li>
+<li>
+<p>Delete View</p>
+</li>
+<li>URL: <code>/&lt;owner_id&gt;/delete/</code></li>
+<li>Name: <code>owner_delete</code></li>
+<li>View: <code>owner_delete</code></li>
+<li>Method: POST</li>
+</ol>
+<h3 id="car-management">Car Management<a class="headerlink" href="#car-management" title="Permanent link">&para;</a></h3>
+<ol>
+<li>List View</li>
+<li>URL: <code>/cars/</code></li>
+<li>Name: <code>car_list</code></li>
+<li>View: <code>car_list</code></li>
+<li>
+<p>Method: GET</p>
+</li>
+<li>
+<p>Detail View</p>
+</li>
+<li>URL: <code>/cars/&lt;car_id&gt;/</code></li>
+<li>Name: <code>car_detail</code></li>
+<li>View: <code>car_detail</code></li>
+<li>
+<p>Method: GET</p>
+</li>
+<li>
+<p>Create View</p>
+</li>
+<li>URL: <code>/cars/create/</code></li>
+<li>Name: <code>car_create</code></li>
+<li>View: <code>car_create</code></li>
+<li>
+<p>Methods: GET, POST</p>
+</li>
+<li>
+<p>Update View</p>
+</li>
+<li>URL: <code>/cars/&lt;car_id&gt;/update/</code></li>
+<li>Name: <code>car_update</code></li>
+<li>View: <code>car_update</code></li>
+<li>
+<p>Methods: GET, POST</p>
+</li>
+<li>
+<p>Delete View</p>
+</li>
+<li>URL: <code>/cars/&lt;car_id&gt;/delete/</code></li>
+<li>Name: <code>car_delete</code></li>
+<li>View: <code>car_delete</code></li>
+<li>Method: POST</li>
+</ol>
+<h3 id="drivinglicense-management">DrivingLicense Management<a class="headerlink" href="#drivinglicense-management" title="Permanent link">&para;</a></h3>
+<ol>
+<li>List View</li>
+<li>URL: <code>/licenses/</code></li>
+<li>Name: <code>license_list</code></li>
+<li>View: <code>license_list</code></li>
+<li>
+<p>Method: GET</p>
+</li>
+<li>
+<p>Detail View</p>
+</li>
+<li>URL: <code>/licenses/&lt;license_id&gt;/</code></li>
+<li>Name: <code>license_detail</code></li>
+<li>View: <code>license_detail</code></li>
+<li>
+<p>Method: GET</p>
+</li>
+<li>
+<p>Create View</p>
+</li>
+<li>URL: <code>/licenses/create/</code></li>
+<li>Name: <code>license_create</code></li>
+<li>View: <code>license_create</code></li>
+<li>
+<p>Methods: GET, POST</p>
+</li>
+<li>
+<p>Update View</p>
+</li>
+<li>URL: <code>/licenses/&lt;license_id&gt;/update/</code></li>
+<li>Name: <code>license_update</code></li>
+<li>View: <code>license_update</code></li>
+<li>
+<p>Methods: GET, POST</p>
+</li>
+<li>
+<p>Delete View</p>
+</li>
+<li>URL: <code>/licenses/&lt;license_id&gt;/delete/</code></li>
+<li>Name: <code>license_delete</code></li>
+<li>View: <code>license_delete</code></li>
+<li>Method: POST</li>
+</ol>
+<h3 id="ownership-management">Ownership Management<a class="headerlink" href="#ownership-management" title="Permanent link">&para;</a></h3>
+<ol>
+<li>List View</li>
+<li>URL: <code>/ownerships/</code></li>
+<li>Name: <code>ownership_list</code></li>
+<li>View: <code>ownership_list</code></li>
+<li>
+<p>Method: GET</p>
+</li>
+<li>
+<p>Create View</p>
+</li>
+<li>URL: <code>/ownerships/create/</code></li>
+<li>Name: <code>ownership_create</code></li>
+<li>View: <code>ownership_create</code></li>
+<li>
+<p>Methods: GET, POST</p>
+</li>
+<li>
+<p>Update View</p>
+</li>
+<li>URL: <code>/ownerships/&lt;ownership_id&gt;/update/</code></li>
+<li>Name: <code>ownership_update</code></li>
+<li>View: <code>ownership_update</code></li>
+<li>
+<p>Methods: GET, POST</p>
+</li>
+<li>
+<p>Delete View</p>
+</li>
+<li>URL: <code>/ownerships/&lt;ownership_id&gt;/delete/</code></li>
+<li>Name: <code>ownership_delete</code></li>
+<li>View: <code>ownership_delete</code></li>
+<li>Method: POST</li>
+</ol>
+<h2 id="url-features">URL Features<a class="headerlink" href="#url-features" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Pattern Types</li>
+<li>Basic patterns (<code>/cars/</code>, <code>/owners/</code>)</li>
+<li>Dynamic segments (<code>&lt;int:owner_id&gt;</code>)</li>
+<li>
+<p>Named URLs for reverse lookup</p>
+</li>
+<li>
+<p>View Mapping</p>
+</li>
+<li>Function-based views</li>
+<li>CRUD operations</li>
+<li>
+<p>List and detail views</p>
+</li>
+<li>
+<p>URL Organization</p>
+</li>
+<li>Resource-based grouping</li>
+<li>Consistent naming</li>
+<li>
+<p>RESTful structure</p>
+</li>
+<li>
+<p>URL Names</p>
+</li>
+<li>Descriptive naming</li>
+<li>Reverse URL resolution</li>
+<li>Template URL references</li>
+</ol>
+<h2 id="usage-examples">Usage Examples<a class="headerlink" href="#usage-examples" title="Permanent link">&para;</a></h2>
+<h3 id="template-url-tags">Template URL Tags<a class="headerlink" href="#template-url-tags" title="Permanent link">&para;</a></h3>
+<pre><code class="language-html">&lt;!-- Link to owner list --&gt;
+&lt;a href=&quot;{% url 'owner_list' %}&quot;&gt;All Owners&lt;/a&gt;
+
+&lt;!-- Link to owner detail --&gt;
+&lt;a href=&quot;{% url 'owner_detail' owner.id %}&quot;&gt;View Owner&lt;/a&gt;
+
+&lt;!-- Form action URL --&gt;
+&lt;form action=&quot;{% url 'owner_create' %}&quot; method=&quot;post&quot;&gt;
+</code></pre>
+<h3 id="view-url-resolution">View URL Resolution<a class="headerlink" href="#view-url-resolution" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from django.shortcuts import redirect
+from django.urls import reverse
+
+# Redirect to owner detail
+return redirect('owner_detail', owner_id=owner.id)
+
+# Get URL by name
+url = reverse('owner_list')
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../admin/" class="btn btn-neutral float-left" title="Admin"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../lab3/models/" class="btn btn-neutral float-right" title="Models">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../admin/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../lab3/models/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

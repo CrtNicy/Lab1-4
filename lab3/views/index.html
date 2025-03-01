@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Views - Web Development Lab Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Views";
+        var mkdocs_page_input_path = "lab3/views.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Web Development Lab Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 1</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work1/">Work 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work2/">Work 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work3/">Work 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work4/">Work 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab1/work5/">Work 5</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 2</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/models/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/views/">Views</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab2/urls/">URLs</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 3</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../models/">Models</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Views</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viewset-classes">ViewSet Classes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#flight-viewset">Flight ViewSet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#passenger-viewset">Passenger ViewSet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#booking-viewset">Booking ViewSet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comment-viewset">Comment ViewSet</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#api-views">API Views</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#login-view">Login View</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viewset-features">ViewSet Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#api-authentication">API Authentication</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#response-examples">Response Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#successful-response">Successful Response</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#error-response">Error Response</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forms/">Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin/">Admin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../urls/">URLs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../practical/">Practical</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../leetcode.md">LeetCode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lab 4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/pages/">Pages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lab4/components/">Components</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Web Development Lab Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lab 3</li>
+      <li class="breadcrumb-item active">Views</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="views-configuration">Views Configuration<a class="headerlink" href="#views-configuration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Experiment 3 implements API views using Django REST Framework's ViewSets and APIViews for the flight booking system.</p>
+<h2 id="viewset-classes">ViewSet Classes<a class="headerlink" href="#viewset-classes" title="Permanent link">&para;</a></h2>
+<h3 id="flight-viewset">Flight ViewSet<a class="headerlink" href="#flight-viewset" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from rest_framework import viewsets
+from .models import Flight
+from .serializers import FlightSerializer
+
+class FlightViewSet(viewsets.ModelViewSet):
+    queryset = Flight.objects.all()
+    serializer_class = FlightSerializer
+</code></pre>
+<h3 id="passenger-viewset">Passenger ViewSet<a class="headerlink" href="#passenger-viewset" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from .models import Passenger
+from .serializers import PassengerSerializer
+
+class PassengerViewSet(viewsets.ModelViewSet):
+    queryset = Passenger.objects.all()
+    serializer_class = PassengerSerializer
+</code></pre>
+<h3 id="booking-viewset">Booking ViewSet<a class="headerlink" href="#booking-viewset" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from .models import Booking
+from .serializers import BookingSerializer
+
+class BookingViewSet(viewsets.ModelViewSet):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
+</code></pre>
+<h3 id="comment-viewset">Comment ViewSet<a class="headerlink" href="#comment-viewset" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from .models import Comment
+from .serializers import CommentSerializer
+
+class CommentViewSet(viewsets.ModelViewSet):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+</code></pre>
+<h2 id="api-views">API Views<a class="headerlink" href="#api-views" title="Permanent link">&para;</a></h2>
+<h3 id="login-view">Login View<a class="headerlink" href="#login-view" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+
+class LoginView(APIView):
+    def post(self, request):
+        username = request.data.get('username')
+        password = request.data.get('password')
+
+        if not username or not password:
+            return Response(
+                {'error': 'Please provide both username and password'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        try:
+            passenger = Passenger.objects.get(
+                username=username,
+                password=password
+            )
+            serializer = PassengerSerializer(passenger)
+            return Response(serializer.data)
+        except Passenger.DoesNotExist:
+            return Response(
+                {'error': 'Invalid credentials'},
+                status=status.HTTP_401_UNAUTHORIZED
+            )
+</code></pre>
+<h2 id="viewset-features">ViewSet Features<a class="headerlink" href="#viewset-features" title="Permanent link">&para;</a></h2>
+<ol>
+<li>CRUD Operations</li>
+<li>List objects (GET)</li>
+<li>Create objects (POST)</li>
+<li>Retrieve objects (GET)</li>
+<li>Update objects (PUT/PATCH)</li>
+<li>
+<p>Delete objects (DELETE)</p>
+</li>
+<li>
+<p>Serializer Integration</p>
+</li>
+<li>Automatic serialization</li>
+<li>Deserialization</li>
+<li>
+<p>Validation</p>
+</li>
+<li>
+<p>Query Set Management</p>
+</li>
+<li>Filtering</li>
+<li>Ordering</li>
+<li>
+<p>Pagination</p>
+</li>
+<li>
+<p>Response Handling</p>
+</li>
+<li>JSON responses</li>
+<li>Status codes</li>
+<li>Error messages</li>
+</ol>
+<h2 id="api-authentication">API Authentication<a class="headerlink" href="#api-authentication" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Login Process</li>
+<li>Username/password validation</li>
+<li>Error handling</li>
+<li>
+<p>Response formatting</p>
+</li>
+<li>
+<p>Session Management</p>
+</li>
+<li>Session creation</li>
+<li>Session validation</li>
+<li>Session cleanup</li>
+</ol>
+<h2 id="response-examples">Response Examples<a class="headerlink" href="#response-examples" title="Permanent link">&para;</a></h2>
+<h3 id="successful-response">Successful Response<a class="headerlink" href="#successful-response" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+    &quot;id&quot;: 1,
+    &quot;flight_number&quot;: &quot;CA123&quot;,
+    &quot;airline&quot;: &quot;Air China&quot;,
+    &quot;departure_time&quot;: &quot;2024-02-28T10:00:00Z&quot;,
+    &quot;arrival_time&quot;: &quot;2024-02-28T12:00:00Z&quot;,
+    &quot;flight_type&quot;: &quot;DEP&quot;,
+    &quot;gate_number&quot;: &quot;A1&quot;
+}
+</code></pre>
+<h3 id="error-response">Error Response<a class="headerlink" href="#error-response" title="Permanent link">&para;</a></h3>
+<pre><code class="language-json">{
+    &quot;error&quot;: &quot;Please provide both username and password&quot;
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../models/" class="btn btn-neutral float-left" title="Models"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../forms/" class="btn btn-neutral float-right" title="Forms">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../models/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../forms/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
