@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Owners List</h1>
+  <ul>
+  {% for owner in owners %}
+    <li><a href="{% url 'owner_detail' owner.pk %}">{{ owner }}</a></li>
+  {% empty %}
+    <li>No owners yet.</li>
+  {% endfor %}
+  </ul>
+  <a href="{% url 'owner_create' %}">Add Owner</a>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ owner }}</h1>
+  <h2>Cars</h2>
+  <ul>
+  {% for ownership in owner.ownership_set.all %}
+    <li>{{ ownership.car }} ({% if ownership.end_date %}{{ ownership.end_date }}{% else %}present{% endif %})</li>
+  {% empty %}
+    <li>No cars owned.</li>
+  {% endfor %}
+  </ul>
+  <h2>Driving License</h2>
+  <ul>
+  {% for driving_license in owner.drivinglicense_set.all %}
+    <li>{{ driving_license }} ({{ driving_license.issue_date }})</li>
+  {% empty %}
+    <li>No driving license.</li>
+  {% endfor %}
+  </ul>
+  <a href="{% url 'owner_update' owner.pk %}">Edit</a>
+  <form action="{% url 'owner_delete' owner.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+  </form>
+{% endblock %}
